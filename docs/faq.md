@@ -299,6 +299,7 @@ As a first step, we recommend carefully reading our documentation on [GitHub](ht
     * Double-check that the video capture device is connected correctly. For the [CSI bridge](/README.md#for-the-hdmi-csi-bridge), this should be exactly the camera port; for the [USB dongle](/README.md#for-the-hdmi-usb-dongle), strictly the port indicated in the picture.
     * Some laptops do not output any signal until you switch the output (usually via the FN + and an F5 key on the keyboard).
     * Your computer may have turned on sleep mode for the monitor. Move the mouse to turn it off.
+    * For windows you might need to check for the active signal resolution. To change the active signal resolution you have to go to Settings>System>Display>Advanced display settings>Display adapter properties then, click "List All Models" and choose the one you want. Keep trying different Hz settings.
 
 
 ??? question "The video works in the booted OS, but not in the BIOS/UEFI"
@@ -414,6 +415,10 @@ As a first step, we recommend carefully reading our documentation on [GitHub](ht
 
 ??? question "Unexpected interruption while loading the image for Mass storage drive"
     If problems occur when uploading even a small disk image it may be due to unstable network operation or antivirus software. It is well known that Kaspersky antivirus cuts off PiKVM connections during uploading, so you should add the PiKVM website to Kaspersky's list of exceptions or not filter web requests with the antivirus. Antivirus programs can also affect the performance of certain interface elements, for example the quality slider. For Kaspersky, the steps to add the network address of PiKVM's website to the exclusion list is: `Protection -> Private browsing -> Categories and exclusions -> Exclusions`.
+    
+??? question "I cannot click on anything when using the WebGUI on my phone"
+    At this time, iOS has the buttons on the bottom if you have the correct resolution, sometimes you cannot see them due to the resolution.
+    At this time, android is not supported, our suggestion is to use a VNC client.
 
 
 ## Hardware problems (Wi-Fi, ATX, etc)
